@@ -44,17 +44,17 @@
     <div id="sendingEmail" class="reveal-modal" data-reveal>
         <h2>Ecriture.</h2>
         <p class="lead">Ecrire un email sur le livre d'or.</p>
-        <form>
+        <form id="target" action="#">
             <div class="row">
                 <div class="large-4 columns">
                     <label>Nom
-                        <input type="text" placeholder="Dupont" /> </label>
+                        <input type="text" placeholder="Dupont" id="name"/> </label>
                 </div>
             </div>
             <div class="row">
                 <div class="large-4 columns">
                     <label>Prénom
-                        <input type="text" placeholder="Jean" /> </label>
+                        <input type="text" placeholder="Jean" id="surname"/> </label>
                 </div>
             </div>
             <div class="row">
@@ -69,14 +69,14 @@
             <div class="row">
                 <div class="large-12 columns">
                     <label>Ecrire un témoignage
-                        <textarea placeholder="Je présente..."></textarea>
+                        <textarea placeholder="Je présente..." id="testimony"></textarea>
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="large-12 columns">
                     <div class="g-recaptcha" data-sitekey="6LdUPwMTAAAAAGLEjbrt09BTucf7nvZ2HC2MhMOX"></div>
-                    <a role="button" aria-label="submit form" href="#" class="button success">Envoyer</a>
+                    <input type="submit" id="submitButton" name="submitButton" value="Submit" class="button success">
                 </div>
             </div>
         </form>
@@ -145,6 +145,7 @@
     </footer>
 
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script>
