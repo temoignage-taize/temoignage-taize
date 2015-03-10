@@ -48,13 +48,18 @@
             <div class="row">
                 <div class="large-4 columns">
                     <label>Nom
-                        <input type="text" placeholder="Dupont" id="name"/> </label>
+                        <input type="text" placeholder="Dupont" id="name" class=""/> 
+                        <small id="errorName" class="" hidden>Invalide</small>
+                    </label>
+                        
                 </div>
             </div>
             <div class="row">
                 <div class="large-4 columns">
                     <label>Prénom
-                        <input type="text" placeholder="Jean" id="surname"/> </label>
+                        <input type="text" placeholder="Jean" id="surname" class=""/>
+                        <small id="errorSurname" class="" hidden>Invalide</small>
+                    </label>
                 </div>
             </div>
             <div class="row">
@@ -69,13 +74,16 @@
             <div class="row">
                 <div class="large-12 columns">
                     <label>Ecrire un témoignage
-                        <textarea placeholder="Je présente..." id="testimony"></textarea>
+                        <textarea placeholder="Je présente..." id="testimony" class=""></textarea>
+                        <small id="errorTestimony" class="" hidden>Invalide</small>
                     </label>
                 </div>
             </div>
             <div class="row">
-                <div class="large-12 columns">
+                <div class="large-4 columns">
                     <div class="g-recaptcha" data-sitekey="6LdUPwMTAAAAAGLEjbrt09BTucf7nvZ2HC2MhMOX"></div>
+                    <small id="errorCaptcha" class="" hidden>Invalide</small>
+                    <br/>
                     <input type="submit" id="submitButton" name="submitButton" value="Submit" class="button success">
                 </div>
             </div>
@@ -147,11 +155,10 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         $(document).foundation();
     </script>
-
 </body>
 
 </html>
